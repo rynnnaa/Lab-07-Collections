@@ -25,6 +25,23 @@ namespace Lab_07_Collections.Classes
 
         public IEnumerator<T> GetEnumerator()
         {
+            for(int i = 0; i < currentIndex; i++)
+            {
+                yield return cards[i];
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        public IEnumerator<T> GetEnumerator()
+        {
             throw new NotImplementedException();
         }
 
