@@ -4,7 +4,7 @@ Developer: Ryna Truong
 
 Contributions and References: Deziree Teugue, Xia Liu
 
-Actual Time to complete: In process, 6 hours
+Actual Time to complete: In process, 4 hours
 
 The purpose of the app is to create a card game in which you put cards in a deck and deal them.
 
