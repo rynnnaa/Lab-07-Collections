@@ -43,10 +43,16 @@ namespace Lab_07_Collections.Classes
 
                     T[] newCards = cards.Where((value,idx) => idx != index).ToArray();
 
+                    Array.Copy(newCards, cards, newCards.Length);
+                    return cards;
 
                 }
             }
+            Console.WriteLine("This does not exist");
+            return null;
         }
+
+
 
 
 
