@@ -3,8 +3,9 @@ using System;
 
 namespace Lab_07_Collections
 {
-    class Program
+    public class Program
     {
+        public static object Deck { get; set; }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
