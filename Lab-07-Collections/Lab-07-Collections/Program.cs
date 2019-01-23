@@ -68,6 +68,34 @@ namespace Lab_07_Collections
             card13.Value = Card.CardValue.King;
             card13.suit = Card.Suit.Diamonds;
 
-        }
+            foreach (Card item in Deck)
+            {
+                Console.WriteLine($"{item.Value} of {item.suit}");
+            }
+
+            //deal cards evenly between player 1 and player 2
+            Console.WriteLine("");
+            Console.WriteLine("Deal cards:");
+            Console.WriteLine("");
+
+            int counter = 0;
+
+            foreach (Card item in Deck)
+            {
+                counter++;
+                if (counter < 7)
+                {
+                    Console.WriteLine($"Player 1 cards: {item.Value} of {item.suit}");
+                }
+                else if (counter >= 7 && counter < 13)
+                {
+                    Console.WriteLine($"Player 2 cards: {item.Value} of {item.suit}");
+                }
+                else
+                {
+                    Console.WriteLine($"Dealer cards:  {item.Value} of {item.suit}");
+                }
+            }
+
     }
 }

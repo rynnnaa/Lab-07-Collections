@@ -29,7 +29,7 @@ namespace Lab_07_Collections.Classes
             T deletedCard = default(T);
 
 
-            for (int i = 0; i < cards.Length; i++)
+            for (int i = 0; i < currentIndex; i++)
             {
                 if (cards[i].Equals(item))
                 {
