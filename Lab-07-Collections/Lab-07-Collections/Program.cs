@@ -68,6 +68,21 @@ namespace Lab_07_Collections
             card13.Value = Card.CardValue.King;
             card13.suit = Card.Suit.Diamonds;
 
+            //add cards to the deck
+            Deck.Add(card1);
+            Deck.Add(card2);
+            Deck.Add(card3);
+            Deck.Add(card4);
+            Deck.Add(card5);
+            Deck.Add(card6);
+            Deck.Add(card7);
+            Deck.Add(card8);
+            Deck.Add(card9);
+            Deck.Add(card10);
+            Deck.Add(card11);
+            Deck.Add(card12);
+            Deck.Add(card13);
+
             foreach (Card item in Deck)
             {
                 Console.WriteLine($"{item.Value} of {item.suit}");
@@ -101,7 +116,7 @@ namespace Lab_07_Collections
             Console.WriteLine("");
 
             //card can only be removed if it actually exists in the deck
-            Card removefromdeck = Deck.Remove(card9);
+            Card removefromdeck = Deck.Remove(card3);
             if (removefromdeck != null)
             {
                 Console.WriteLine($"Removing {removefromdeck.Value} of {removefromdeck.suit}");
