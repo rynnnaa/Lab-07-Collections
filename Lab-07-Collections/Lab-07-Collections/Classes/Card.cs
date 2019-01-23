@@ -6,18 +6,18 @@ namespace Lab_07_Collections.Classes
 {
     public class Card
     {
+        //properties
         public Suit CardSuit { get; set; }
         public CardValue Value { get; set; }
         public Suit suit { get; set; }
 
-        public enum Suits { Heart, Diamond, Club, Spade }
-
-
-        public Card(string cardN, CardSuit cardsuit)
+        //card construrctor
+        public Card(CardValue value, Suit suit)
         {
-            cardNum = cardN;
-            cardsuit = CardSuit;
+            Value = value;
+            CardSuit = suit;
         }
+
 
     }
 }
