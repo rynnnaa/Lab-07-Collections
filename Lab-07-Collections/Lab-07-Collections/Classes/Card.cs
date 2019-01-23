@@ -47,8 +47,6 @@ namespace Lab_07_Collections.Classes
             Jack,
             Queen,
             King
-        }
-
-
+        }  
     }
 }
