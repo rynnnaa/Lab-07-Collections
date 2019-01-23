@@ -18,6 +18,20 @@ namespace Lab_07_Collections.Classes
             CardSuit = suit;
         }
 
+        public Card()
+        {
+
+        }
+        //enum acts as a class within the card class!
+        public enum Suit
+        {
+            Hearts,
+            Spades, 
+            Diamonds,
+            Clubs
+
+        }
+
 
     }
 }
