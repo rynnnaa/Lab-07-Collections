@@ -48,7 +48,25 @@ namespace Lab_07_Collections
             card8.Value = Card.CardValue.Eight;
             card8.suit = Card.Suit.Diamonds;
 
-   
+            Card card9 = new Card();
+            card9.Value = Card.CardValue.Nine;
+            card9.suit = Card.Suit.Spades;
+
+            Card card10 = new Card();
+            card10.Value = Card.CardValue.Ten;
+            card10.suit = Card.Suit.Hearts;
+
+            Card card11 = new Card();
+            card11.Value = Card.CardValue.Jack;
+            card11.suit = Card.Suit.Spades;
+
+            Card card12 = new Card();
+            card12.Value = Card.CardValue.Queen;
+            card12.suit = Card.Suit.Clubs;
+
+            Card card13 = new Card();
+            card13.Value = Card.CardValue.King;
+            card13.suit = Card.Suit.Diamonds;
 
         }
     }

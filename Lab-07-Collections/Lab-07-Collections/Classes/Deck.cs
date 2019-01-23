@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Lab_07_Collections.Classes
 {
-    class Deck<T> : IEnumerable<T>
+    public class Deck<T> : IEnumerable<T>
     {
         public T[] cards = new T[13];
         int currentIndex = 0;
