@@ -97,5 +97,29 @@ namespace Lab_07_Collections
                 }
             }
 
+            //Remove one card from the deck
+            Console.WriteLine("");
+
+            //card can only be removed if it actually exists in the deck
+            Card removefromdeck = Deck.Remove(card9);
+            if (removefromdeck != null)
+            {
+                Console.WriteLine($"Removing {removefromdeck.Value} of {removefromdeck.suit}");
+
+            }
+
+            //show deck counter after remove
+
+            Console.WriteLine("");
+            Console.WriteLine($"Number of cards left: {Deck.Count()}");
+            Console.WriteLine("");
+
+            //show leftover cards
+            foreach (Card item in Deck)
+            {
+                Console.WriteLine($"{item.Value} of {item.suit}");
+            }
+
+        }
     }
 }
