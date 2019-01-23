@@ -6,23 +6,25 @@ using System.Text;
 
 namespace Lab_07_Collections.Classes
 {
-    public class Deck<T> : IEnumerable<T> where T : Card
+     class Deck<T> : IEnumerable<T>
     {
-        T[] cards = new T[56];
+        public T[] cards = new T[13];
         int currentIndex = 0;
 
-        int counter = 0;
+        //adding a card to the deck
+
         public void Add(T item)
         {
-            if (currentIndex > cards.Length - 1)
+            if (currentIndex == cards.Length)
             {
-                Array.Resize(ref cards, cards.Length * 3);
+                Array.Resize(ref cards, cards.Length * 2);
             }
             cards[currentIndex] = item;
             currentIndex++;
-            counter++;
 
         }
+
+        //remove card from deck
 
         public IEnumerator<T> GetEnumerator()
         {
@@ -32,45 +34,37 @@ namespace Lab_07_Collections.Classes
             }
         }
 
-        public T[] Remove (T item)
+        public T Remove (T item)
         {
-            for(int i =0; i <cards.Length; i++)
+            T deletedCard = default(T);
+
+
+            for (int i = 0; i < cards.Length; i++)
             {
-                if (cards[i] == item)
+                if (cards[i].Equals(item))
                 {
-                    int index = Array.IndexOf(cards, item);
-                    counter--;
+                    deletedCard = cards[i];
+                    while (i < currentIndex - 1)
+                    {
+                        //reset
+                        cards[i] = cards[i + 1];
+                        i++;
+                    }
+                    cards[i] = default(T);
 
-                    T[] newCards = cards.Where((value,idx) => idx != index).ToArray();
-
-                    Array.Copy(newCards, cards, newCards.Length);
-                    return cards;
+                    currentIndex--;
+                    return deletedCard;
 
                 }
             }
-            Console.WriteLine("This does not exist");
-            return null;
+
+            throw new Exception()
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
+        //Do not touch
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 
