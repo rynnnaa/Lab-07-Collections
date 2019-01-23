@@ -54,5 +54,21 @@ namespace CollectionsTEST
 
             Assert.DoesNotContain(card4, Deck);
         }
+
+        [Fact]
+        public void CannotRemoveaItemNOtExsit()
+        {
+            Deck<Card> deck = new Deck<Card>();
+            Card card1 = new Card();
+            Card card2 = new Card();
+
+            deck.Add(card1);
+            deck.Add(card2);
+
+            deck.Remove(card1);
+
+            Assert.DoesNotContain(card1, deck);
+
+        }
     }
 }
