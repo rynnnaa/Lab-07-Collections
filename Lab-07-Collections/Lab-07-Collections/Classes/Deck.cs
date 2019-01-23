@@ -58,14 +58,12 @@ namespace Lab_07_Collections.Classes
                 }
             }
 
-            throw new Exception()
+            throw new Exception("card does not exists in the deck");
         }
 
-        //Do not touch
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+       //count cards in deck
+
+        public int Count()
     }
 
 }
