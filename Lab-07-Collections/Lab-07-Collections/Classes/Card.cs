@@ -6,17 +6,47 @@ namespace Lab_07_Collections.Classes
 {
     public class Card
     {
-        public string cardNum { get; set; }
-        public CardSuit CardSuit { get; set; }
+        //properties
+        public Suit CardSuit { get; set; }
+        public CardValue Value { get; set; }
+        public Suit suit { get; set; }
 
-        public enum Suits { Heart, Diamond, Club, Spade }
-
-
-        public Card(string cardN, CardSuit cardsuit)
+        //card construrctor
+        public Card(CardValue value, Suit suit)
         {
-            cardNum = cardN;
-            cardsuit = CardSuit;
+            Value = value;
+            CardSuit = suit;
         }
 
+        public Card()
+        {
+
+        }
+        //enum acts as a class within the card class!
+        public enum Suit
+        {
+            Hearts,
+            Spades, 
+            Diamonds,
+            Clubs
+
+        }
+
+        public enum CardValue
+        {
+            Ace,
+            Two,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight,
+            Nine,
+            Ten,
+            Jack,
+            Queen,
+            King
+        }  
     }
 }
