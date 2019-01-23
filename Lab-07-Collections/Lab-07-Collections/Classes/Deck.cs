@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Lab_07_Collections.Classes
 {
-     class Deck<T> : IEnumerable<T>
+    class Deck<T> : IEnumerable<T>
     {
         public T[] cards = new T[13];
         int currentIndex = 0;
@@ -24,17 +24,7 @@ namespace Lab_07_Collections.Classes
 
         }
 
-        //remove card from deck
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            for (int i = 0; i < currentIndex; i++)
-            {
-                yield return cards[i];
-            }
-        }
-
-        public T Remove (T item)
+        public T Remove(T item)
         {
             T deletedCard = default(T);
 
@@ -61,9 +51,25 @@ namespace Lab_07_Collections.Classes
             throw new Exception("card does not exists in the deck");
         }
 
-       //count cards in deck
+        //count cards in deck
 
         public int Count()
-    }
+        {
+            return currentIndex;
+        }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < currentIndex; i++)
+            {
+                //return each item
+                yield return cards[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
 }
