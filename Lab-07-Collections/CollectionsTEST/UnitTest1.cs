@@ -11,7 +11,13 @@ namespace CollectionsTEST
         {
             Card card1 = new Card();
             card1.Value = Card.CardValue.Jack;
-            card1
+            card1.CardSuit = Card.Suit.Spades;
+
+            Deck<Card> Deck = new Deck<Card>();
+            Deck.Add(card1);
+
+            Assert.Contains(card1, Deck);
+
 
         }
     }
